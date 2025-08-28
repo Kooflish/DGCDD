@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+      background: linear-gradient(rgba(255, 255, 255, 0.267), rgba(207, 194, 3, 0.192)), 
+      url(/css/Dimensiones-ucsd-696x392.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ======= HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  
+}
+
+ header h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      transition: color 0.3s;
+      color: #ffffff;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+
+/* ======= HERO SECTION ======= */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: .5rem;
+  margin-bottom: 1rem;
+  color: #000; /* Negro */
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+  font-family: Arial;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.btn-primary {
+  background: #ffcc00;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= SECCIÓN DE CARDS ======= */
+.cards-section {
+  padding: 4rem 2rem;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.cards-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1e3c72;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columnas fijas */
+  gap: 1.5rem;
+  padding: 90px;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.822);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 👈 Esto manda el botón abajo */
+  height: 100%; /* 👈 Para que todas las cards se mantengan parejas */
+  cursor: pointer;
+  transition: 0.6s;
+  transform: scale(1);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd4d4bb; /* Puedes cambiar el color/grosor */
+  margin: 0.1rem 0 1rem 0;     /* Espaciado arriba y abajo */
+}
+
+
+.card p {
+  flex-grow: 1; /* 👈 Ocupa el espacio extra para que el botón no suba */
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h2 {
+  font-family: 'Segoe UI';
+  font-size: 1.2rem; /* ajusta el tamaño a tu gusto */
+  color: #000;       /* negro */
+  font-weight: bolder;
+  margin-bottom: 0.8rem;
+  text-align: center; /* opcional: centrado dentro de la card */
+}
+
+
+.card h4 {
+  margin-bottom: 1rem;
+  color: #2a5298;
+}
+
+.card p {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.acciones a {
+  display: flex;
+  background: #03880e;
+  color: #fff;
+  padding: 0.5rem 7rem;
+  border-radius: 15px;
+  font-size: 0.95rem;
+  transition: background 0.5s;
+  justify-content: center; /* centro horizontal */
+  align-items: center;     /* centro vertical */
+  
+}
+
+.acciones a:hover {
+  color: #000;
+  background: linear-gradient(110deg, #dfbb2a, #ffd633);
+  border-color: #ffd633;
+  box-shadow: 0 4px 6px 0 rgba(73, 72, 3, 0.863);
+}
+
+/* ======= FOOTER ======= */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Hace que el contenido empuje el footer hacia abajo */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #bbb;
+}
+
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
